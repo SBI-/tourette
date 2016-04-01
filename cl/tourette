@@ -1,0 +1,4 @@
+#!/bin/bash
+rand=$(( $RANDOM % 4 + 1))
+echo $(shuf -n $rand ../words/words_github) $(shuf -n 1 ../words/words_linux) | sed 's/ /\n/g' | shuf | tr -d '\n'
+echo
