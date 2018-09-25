@@ -2,3 +2,6 @@
 rand=$(( $RANDOM % 4 + 1))
 echo $(shuf -n $rand ../words/words_github) $(shuf -n 1 ../words/words_linux) | sed 's/ /\n/g' | shuf | tr '\n' ' '
 echo
+
+# example of just shuffling random (french) words
+# echo $(shuf -n $(( $RANDOM % 5 + 1 )) /usr/share/dict/french) | sed 's/ /\n/g' | shuf | tr '\n' ' '
